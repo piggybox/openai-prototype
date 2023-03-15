@@ -38,7 +38,7 @@ def call_openai_api(prompt: str) -> str:
     return response.choices[0].text
 
 
-def generate_keywords(prompt: str) -> List[str]:
+def generate_branding_keywords(prompt: str) -> List[str]:
     enriched_prompt = f"Generate related branding keywords for {prompt}: "
     keywords_text: str = call_openai_api(enriched_prompt)
 
