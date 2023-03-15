@@ -31,7 +31,7 @@ def validate_length(prompt: str) -> bool:
 def call_openai_api(prompt: str) -> str:
     openai.api_key = os.getenv("OPENAI_API_KEY")
     response = openai.Completion.create(
-        model="davinci-instruct-beta-v3", prompt=prompt, temperature=0.6,
+        model="text-davinci-003", prompt=prompt, temperature=0.6,
         max_tokens=MAX_INPUT_LENGTH
     )
 
