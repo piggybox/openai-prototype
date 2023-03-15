@@ -17,7 +17,7 @@ def main():
     print(f"User input: {user_input}\n")
     if validate_length(user_input):
         generate_branding_snippet(user_input)
-        generate_keywords(user_input)
+        generate_branding_keywords(user_input)
     else:
         raise ValueError(
             f"Input length is too long. Must be under {MAX_INPUT_LENGTH}. Submitted input is {user_input}"
