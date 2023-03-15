@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from ai import generate_branding_snippet, generate_branding_keywords
+from mangum import Mangum
 
 app = FastAPI()
+handler = Mangum(app)
 
 
 @app.get("/snippet")
