@@ -1,9 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from ai import generate_branding_snippet, generate_branding_keywords
 from mangum import Mangum
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
 handler = Mangum(app)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/snippet")
