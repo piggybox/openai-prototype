@@ -43,7 +43,7 @@ def generate_query(prompt: str) -> str:
     """
 
     query: str = call_openai_api(enriched_prompt)
-    query: str = query.strip()
+    # query: str = query.strip()
 
     print(f"generated query: {query}")
     return query

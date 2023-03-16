@@ -1,4 +1,6 @@
 import React from "react"
+import Form from "./form"
+import Results from "./result"
 
 const Prototype: React.FC = () => {
   const [prompt, setPrompt] = React.useState("")
@@ -20,27 +22,18 @@ const Prototype: React.FC = () => {
 
   let resultElement = null
   if (hasResult) {
-    resultElement = (
-      <div>
-        Here are the results
-        <div>Query: {query}</div>
-      </div>
-    )
+    resultElement = <Results query={query}></Results>
   }
+
+  const formElement = (
+    <Form prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} />
+  )
 
   return (
     <>
       <h1>Prototype</h1>
       <div>--------</div>
-      <p>Tell me what you want to know</p>
-      <input
-        type="text"
-        placeholder="question?"
-        onChange={(e) => setPrompt(e.currentTarget.value)}
-        value={prompt}
-        size="100"
-      />
-      <button onClick={onSubmit}>Submit</button>
+      {formElement}
       <div>-------</div>
       {resultElement}
     </>
