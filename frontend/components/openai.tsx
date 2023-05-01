@@ -20,14 +20,14 @@ const Prototype: React.FC = () => {
     setHasResult(true)
   }
 
-  let resultElement = null
+  let displayedElement = null
   if (hasResult) {
-    resultElement = <Results query={query}></Results>
+    displayedElement = <Results query={query}></Results>
+  } else {
+    displayedElement = (
+      <Form prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} />
+    )
   }
-
-  const formElement = (
-    <Form prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} />
-  )
 
   const gradientTextStyle =
     "text-white text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 font-light w-fit mx-auto"
@@ -49,8 +49,7 @@ const Prototype: React.FC = () => {
           <div className="mb-6 text-slate-400">
             <p>Tell me what you want to know</p>
           </div>
-          {formElement}
-          {resultElement}
+          {displayedElement}
         </div>
       </div>
     </div>
