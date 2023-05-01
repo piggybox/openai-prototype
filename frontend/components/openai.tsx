@@ -20,9 +20,14 @@ const Prototype: React.FC = () => {
     setHasResult(true)
   }
 
+  const onReset = (data: any) => {
+    setQuery("")
+    setHasResult(false)
+  }
+
   let displayedElement = null
   if (hasResult) {
-    displayedElement = <Results query={query}></Results>
+    displayedElement = <Results query={query} onBack={onReset}></Results>
   } else {
     displayedElement = (
       <Form prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} />

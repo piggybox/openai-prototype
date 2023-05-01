@@ -1,5 +1,6 @@
 interface ResultsProps {
   query: string
+  onBack: any
 }
 
 const Results: React.FC<ResultsProps> = (props) => {
@@ -10,6 +11,7 @@ const Results: React.FC<ResultsProps> = (props) => {
       <div className="bg-blue-200 p-1 text-blue-700 px-3 text-sm rounded-md">
         Query: {props.query}
       </div>
+      <button onClick={props.onBack}>Back</button>
     </div>
   )
 }
