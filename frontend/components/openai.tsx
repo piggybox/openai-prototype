@@ -41,7 +41,9 @@ const Prototype: React.FC = () => {
             <h1 className={gradientTextStyle + " text-3xl font-light"}>
               AI Query Generator
             </h1>
-            <div className={gradientTextStyle}>Ask data questions without SQL</div>
+            <div className={gradientTextStyle}>
+              Ask data questions without SQL
+            </div>
           </div>
 
           <div className="mb-6 text-slate-400">
