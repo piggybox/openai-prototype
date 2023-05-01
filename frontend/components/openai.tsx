@@ -39,7 +39,7 @@ const Prototype: React.FC = () => {
           <div className="text-center my-6">
             {/* <Image src={logo} width={42} height={42} /> */}
             <h1 className={gradientTextStyle + " text-3xl font-light"}>
-              Fabi AI Query Generator
+              AI Query Generator
             </h1>
             <div className={gradientTextStyle}>Ask data questions without SQL</div>
           </div>

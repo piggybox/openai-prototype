@@ -4,7 +4,6 @@ interface ResultsProps {
 
 const Results: React.FC<ResultsProps> = (props) => {
   return (
-    <>
       <div>
         <div className={" flex justify-between my-2 mb-6 text-sm"}></div>
         Here are the results
@@ -12,7 +11,6 @@ const Results: React.FC<ResultsProps> = (props) => {
           Query: {props.query}
         </div>
       </div>
-    </>
   )
 }
 
